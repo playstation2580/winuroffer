@@ -1,0 +1,135 @@
+ <!doctype html><html>
+<!-- Mirrored from www.landpage.co/f5f548c6-bedc-11ea-8095-2ef98f3a3a3a by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Jul 2020 17:25:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"f1e66e60b0",applicationID:"230713468"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script><meta name="viewport" content="width=device-width,initial-scale=1" /><meta name="HandheldFriendly" content="true" /><title></title><link rel="shortcut icon" href="#"  type="image/x-icon"><!--[if lt IE 9]><script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><link href="#" type="text/css" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Russo+One&amp;subset=latin,latin-ext" type="text/css" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,400,400italic,700,700italic&amp;subset=latin,latin-ext" type="text/css" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&amp;subset=latin,latin-ext" type="text/css" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,700,700italic&amp;subset=latin,latin-ext" type="text/css" rel="stylesheet"><!--[if lt IE 9]><link href="https://old.assets-landingi.com/bootstrap/css/ie8-grid.css?v=8.9.8" type="text/css" rel="stylesheet"><link href="https://styles.assets-landingi.com/OFmSdtC0/base_ie8.css" type="text/css" rel="stylesheet"><![endif]--><link href="../styles.assets-landingi.com/assets/css/2.11-landend-base.css" type="text/css" rel="stylesheet"><link href="../styles.assets-landingi.com/Mxwkk2qA/base.css" type="text/css" rel="stylesheet"><script>
+    var landingiInternalDetails = {
+        'landing_id': '858731',
+        'landing_hash': 'e3665c0e39c818a94373',
+        'landing_variant_hash': '',
+        'landing_name': 'Get+the+Brand+New+Playstation+5%21',
+        'landing_lang': 'en',
+        'account_uuid': '4cd1a94c-bedc-11ea-a501-06c24fa603c7',
+        'apikey': '466ee45a-dd56-4e2a-a892-6d3dd9c1aaf8'
+   }
+</script><script>var youtubeVideos = [];</script><script src="https://popups.landingi.com/api/v2/landing/install-code?apikey=466ee45a-dd56-4e2a-a892-6d3dd9c1aaf8&amp;landing=e3665c0e39c818a94373"></script><script src="../scripts.assets-landingi.com/lightboxes/lightbox-renderc190.js?v=1593790991"></script>
+<script>
+window.addEventListener('load', function () {
+    LightboxRender.init({
+        useAaf: true
+    })
+});
+</script></head><body id="feGJze1HWiZGvcS6NKzxebsTCxR1B79o">
+<div id="GlCqSZoJOXE9xSbRkRMvGI6ZTTargrg9" class="widget widget-section">
+    <div class="row">
+        
+        <div class="container">
+            
+            <div id="VEkiMkv2FtJTlyiTGZvhgwM4Rz2hGEz4" class="widget widget-text"><p></p><p>Big Offer! <br></p></div><div id="R8TFqrlNf2NAAr0v1c2lMB6P5DFTQLoX" class="widget widget-text"><h1><b>Get the Brand New Playstation 5! </b><br></h1></div><div id="WlCoJcV7fRMsEWRnlCIuH4FLfFIpX2vK" class="widget widget-text"><h1><b>Buy it now and enjoy the amazing feature</b><br></h1></div><a href="https://atcofiles.com/show.php?l=0&amp;u=299165&amp;id=29827" id="MAnb9moJHXB2sF3Tbbaq4l2L1XT7Iz81" class="widget widget-button"  version="3" data-target-url="https://atcofiles.com/show.php?l=0&amp;u=299165&amp;id=29827">
+    <div class="widget-overlay"></div>
+    <div id="Dc1pStlUPBIxatu4eoeAQUxTZZ7SrMxV" class="widget widget-text">BUY IT NOW</div>
+</a><a href="https://atcofiles.com/show.php?l=0&amp;u=299165&amp;id=29827" id="hcKb1f9bBzE0bhHJMIENi8DQ8b8okVTn"
+    class="widget widget-image" target="_blank" 
+>
+    <img src="../images.assets-landingi.com/umeUjXbhS2g3yY0N/ps5_design_david_hansson_wallpaper_1.jpg"  alt=""  width="399" height="301"  srcset="https://images.assets-landingi.com/umeUjXbhS2g3yY0N/ps5_design_david_hansson_wallpaper_1.jpg 1x, https://images.assets-landingi.com/um0LuXWT/ps5_design_david_hansson_wallpaper_1.jpg 2x">
+</a>
+        </div>
+    </div>
+</div>
+<div id="FRkBgTmyRo7UGuSmHVAVsMfIuVJKdoBl" class="widget widget-section">
+    <div class="row">
+        
+        <div class="container">
+            
+            <div id="xZdl9ZOeRwwTtRmEOcDsHIi7ZMUI4WIZ" class="widget widget-text"><h2></h2><h2>ABOUT PLAYSTATION 5!<br></h2></div><div id="nJ5oUplaTTD4BQqyWnchIldpQnoQnphx" class="widget widget-text"><p>Stunning Next Generation Visuals </p></div><div id="cC7uoKLgVEWBZLrNsvSgOSri4FmpefHs" class="widget widget-text"><p>Sony's recent PS5 reveal event gave fans a desperately need look into the graphical power of the next gen console, with truly breathtaking visuals being put on display front and center. The PlayStation 4 was home to some incredibly detailed games like The Last of Us 2 and Horizon: Zero Dawn, so the PlayStation 5 looks to be following suit with some best PS5 games to enjoy in 4K!</p><p>Sony's recent PS5 reveal event gave fans a desperately need look into the graphical power of the next gen console, with truly breathtaking visuals being put on display front and center. The PlayStation 4 was home to some incredibly detailed games like The Last of Us 2 and Horizon: Zero Dawn, so the PlayStation 5 looks to be following suit with some best PS5 games to enjoy in 4K!</p></div><div id="kOI6TaF2OlSqelR3XbHlRHrxR7ZSuIu3" class="widget widget-text"><p>Sony's PS5 is set to feature complete 3D audio with the dedicated Tempest Engine, a modified AMD GPU set to process the PlayStation 5 audio data for the most immersive sound possible. The feature will work with TV speakers and standard home audio setups, but is ideal for high-end headsets and headphones.</p></div><div id="PVtxvSFi9p0g7bscWVSCrlmqI7aB2llM" class="widget widget-text"><p>Incredible 3D Audio Technology</p></div><div id="wrpeTJi0mXe3dPxePmIagzrfA3dVhhC4" class="widget widget-text"><p>Sony pulled out all the stops with the redesign of their beloved DualShock 4 controller, with the new DualSense controller set to be the next big leap in Sony's controller line up. With incredible features like haptic feedback, adaptive triggers, USB-C, built-in microphone and built-in rechargeable battery, Sony's DualSense controller may just be the next go-to gaming pad come later this year.</p></div><div id="XIOXSIhdmfAKiSRfdiIVoHIlhhFoLzh4" class="widget widget-text"><p>Game Changing DualSense Controller</p></div>
+        </div>
+    </div>
+</div>
+<div id="fQikNUiy5shJObKe01iFhVoguiPDLtTo" class="widget widget-section">
+    <div class="row">
+        
+        <div class="container">
+            
+            <div id="Bq0stN72ctrUA0Qx531FTudZFD6bDyhw" class="widget widget-text"><h2>THE FUTURE OF GAMING SHOW<br></h2></div><i id="k3OfwDkpzDMc1dSAN1471LxzoZ7TkOxi" class="fa fa-video-camera widget widget-icon"></i><div id="en2fTB9IcWTFbKApnLoN9qMKVrDXxhnk" class="widget widget-box"></div><div id="ftVNFnF0KyKMaC4oL2PS1IucyLso1bVv" class="widget widget-box"></div><div id="Hnxbft0iyAoAhI2dmawfKlM9Xgd8cX33" ></div>
+                <script>
+                youtubeVideos.push({
+                    hash: 'Hnxbft0iyAoAhI2dmawfKlM9Xgd8cX33',
+                    id: 'RuLci-lSeCo',
+                    autoplay: 0,
+                    rel: 1,
+                    loop: 0,
+                    showinfo: 1,
+                    controls: 1,
+                    mute: 0
+                });
+                </script>
+        </div>
+    </div>
+</div>
+<div id="OBniDwZ6mAR8MNRpE2t8QIS6P4KOWDuQ" class="widget widget-section">
+    <div class="row">
+        
+        <div class="container">
+            
+            
+        </div>
+    </div>
+</div>
+<div id="rRU13vx0uGw9INLNT1x8JVgHHu3rmPHl" class="widget widget-section">
+    <div class="row">
+        
+        <div class="container">
+            
+            <div id="dQ53HkLon1dimnS6sTVJFVVgpqAgbZH7" class="widget widget-text"><h3></h3><h3></h3><h3>FOR MORE OFFER <br></h3></div><div id="aLcLcl9CBkSM6RuCxkp3TquAASrRKXTN" class="widget widget-text">VISIT OUR FACEBOOK PAGE<br></div><a href="https://atcofiles.com/show.php?l=0&amp;u=299165&amp;id=29827" id="lzALkfgoLJsVTFJKoqkKaQ5rEKcwkQzR" class="widget widget-button"  version="3" target="_blank" data-target-url="https://atcofiles.com/show.php?l=0&amp;u=299165&amp;id=29827">
+    <div class="widget-overlay"></div>
+    <div id="yCooQc8XHFFxX5tG4DJcV9111e5JzGzM" class="widget widget-text">VISIT NOW</div>
+</a>
+        </div>
+    </div>
+</div><script type="text/javascript" src="../ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script type="text/javascript" src="../old.assets-landingi.com/bootstrap/js/landend.bootstrap.min.js"></script><script type="text/javascript" src="../old.assets-landingi.com/bootstrap/js/bootbox.min.js"></script><script type="text/javascript" src="../old.assets-landingi.com/js/landing.js"></script><script type="text/javascript" src="../old.assets-landingi.com/assets/js/dist/landend/301019/landend.js"></script><script type='text/javascript' src='../old.assets-landingi.com/assets/js/vendor/jquery-form/jquery.form.min.js'></script>
+<script type="text/javascript" src="../old.assets-landingi.com/assets/js/landend/190819/landend.js"></script>
+<script type="text/javascript" src="../old.assets-landingi.com/assets/js/landend/070619/validation.js"></script><script src="https://stats.landingi.com/track/858731"></script><script>
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var youtubePlayers = [];
+
+    function onYouTubeIframeAPIReady() {
+        youtubeVideos.forEach(function (video) {
+            var options = {
+                playerVars: {
+                    rel: video.rel,
+                    loop: video.loop,
+                    showinfo: video.showinfo,
+                    controls: video.controls,
+                    mute: video.mute
+                },
+                events: {
+                    'onReady': function (event) {
+                        var element = $('#' + video.hash);
+
+                        if (video.autoplay) {
+                            if (element.closest('.video-iframe-container').length || !element.closest('.landingi-popup').length) {
+                                event.target.playVideo();
+                            }
+                        }
+                    },
+                    'onStateChange' : function (event) {
+                        if (event.target.getPlayerState() === 0 && video.loop !== 0) {
+                            event.target.playVideo();
+                        }
+                    }
+                }
+            };
+
+            if (video.id) {
+                options.videoId = video.id;
+            }
+
+            youtubePlayers[video.hash] = new YT.Player(video.hash, options);
+        });
+    }
+</script><script src="../scripts.assets-landingi.com/video-bg/v0.5/videoBackground.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"f1e66e60b0","applicationID":"230713468","transactionName":"MVNVNRYCV0ZZVRZaDggZdgIQClZbF18MVwQeGV4PAAZB","queueTime":0,"applicationTime":165,"atts":"HRRWQ14YREg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+<!-- Mirrored from www.landpage.co/f5f548c6-bedc-11ea-8095-2ef98f3a3a3a by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 05 Jul 2020 17:25:43 GMT -->
+</html>
